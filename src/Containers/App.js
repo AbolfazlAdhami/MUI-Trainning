@@ -10,7 +10,7 @@ function App() {
     // <ThemeProvider></ThemeProvider>
     <Box>
       <Navbar />
-      <Stack direction="row" spacing={2} justifyContent={"space-evenly"}>
+      <Stack direction="row" spacing={2} justifyContent={"space-evenly"} mt={2}>
         <SideBar />
         <Feed />
         <RightBar />

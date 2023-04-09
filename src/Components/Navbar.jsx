@@ -34,7 +34,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
           SocialMedia

@@ -1,9 +1,15 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+import CardPost from "./CardPost";
+import { PostsData } from "../Asset/PostsData";
 function Feed() {
   return (
-    <Box bgcolor={"lightgreen"} flex={4} p={2}>
-      Feed
+    <Box flex={4} p={2}>
+      <Stack display={"flex"} justifyContent={"center"} flexDirection={"column"} alignItems={"center"} gap={2}>
+        {PostsData.map((post) => (
+          <CardPost post={post} key={post.id} />
+        ))}
+      </Stack>
     </Box>
   );
 }
