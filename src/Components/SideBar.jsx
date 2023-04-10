@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
-import { AccountBox, Article, Group, Home, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
+import { AccountBox, Article, Group, Home, LightMode, ModeNight, Person, Settings, Storefront } from "@mui/icons-material";
 
-function SideBar() {
+function SideBar({ themeChange, mode }) {
   return (
     <Box flex={1} p={2} sx={{ display: { xs: "none", md: "block" } }}>
       <Box position="fixed">
@@ -65,10 +65,8 @@ function SideBar() {
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#simple-list">
-              <ListItemIcon>
-                <ModeNight />
-              </ListItemIcon>
-              <Switch />
+              <ListItemIcon>{mode == "dark" ? <LightMode /> : <ModeNight />}</ListItemIcon>
+              <Switch onChange={() => themeChange()} />
             </ListItemButton>
           </ListItem>
         </List>

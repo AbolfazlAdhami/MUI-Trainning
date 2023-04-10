@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
 import CardPost from "./CardPost";
 import { PostsData } from "../Asset/PostsData";
 function Feed() {
@@ -9,6 +9,9 @@ function Feed() {
         {PostsData.map((post) => (
           <CardPost post={post} key={post.id} />
         ))}
+        <Button variant="outlined" color="primary">
+          Show More
+        </Button>
       </Stack>
     </Box>
   );
