@@ -9,10 +9,10 @@ function Navbar() {
   });
 
   const SearchBox = styled("div")(({ theme }) => ({
-    backgroundColor: "white",
     padding: "0 10px",
     borderRadius: theme.shape.borderRadius,
     width: "40%",
+    border: "solid 1.5px white",
   }));
   const IconsBox = styled(Box)(({ theme }) => ({
     display: "none",
